@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="Assets/Favi.png" type="image/png"> <meta charset="UTF-8">
+  <link rel="stylesheet" href="certificates.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificates | Muqtasid Khan</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+    }
+
+    .modal-content {
+  background-color: #111;
+  border-radius: 0px;
+  padding: 0px;
+  border: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+.modal-content img {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+}
+
+    .close {
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #a5b1bd;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .card a:hover {
+      color: #101212;
+    }
+  </style>
+  <script>
+    function openModal(certificateUrl) {
+      const modal = document.getElementById("certificateModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "flex";
+      modalImg.src = certificateUrl;
+    }
+
+    function closeModal() {
+      document.getElementById("certificateModal").style.display = "none";
+    }
+
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById("certificateModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Muqtasid Khan</div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="certificates">
+    <h2>Achievements & Certifications</h2>
+    <div class="certificates">
+
+      <!-- 🌟 Prominent Shield Card -->
+      <div class="card shield-card">
+        <img src="Assets/Shield 1.jpg" alt="Certification Shield">
+        <h3>Certified Web Developer</h3>
+        <p>Earned after completing industry-level training and evaluations from recognized platforms.</p>
+        <!-- Updated View Shield button -->
+        <a href="javascript:void(0);" onclick="openModal('Assets/Shield 1.jpg')">View Shield</a>
+      </div>
+
+      <!-- 🎓 Certificate 1 -->
+      <div class="card">
+        <img src="Assets/Certificate 1.jpg" alt="Certificate 1">
+        <h3>Advanced JavaScript</h3>
+        <p>Completed 40-hour course on JavaScript ES6+, DOM, and async programming.</p>
+        <a href="javascript:void(0);" onclick="openModal('Assets/Certificate 1.jpg')">View Certificate</a>
+      </div>
+
+      <!-- 🎓 Certificate 2 -->
+      <div class="card">
+        <img src="Assets/Certificate 2.jpg" alt="Certificate 2">
+        <h3>React Developer Bootcamp</h3>
+        <p>Built scalable SPAs and used hooks, router, and state management in real-world apps.</p>
+        <a href="javascript:void(0);" onclick="openModal('Assets/Certificate 2.jpg')">View Certificate</a>
+      </div>
+
+      <!-- 🎓 Certificate 3 -->
+      <div class="card">
+        <img src="Assets/Certificate 3.jpg" alt="Certificate 3">
+        <h3>Python for Data Analysis</h3>
+        <p>Used pandas, NumPy, and Matplotlib for exploring and visualizing datasets.</p>
+        <a href="javascript:void(0);" onclick="openModal('Assets/Certificate 3.jpg')">View Certificate</a>
+      </div>
+
+      <!-- 🎓 Certificate 4 -->
+      <div class="card">
+        <img src="Assets/Certificate 3.jpg" alt="Certificate 4">
+        <h3>UI/UX Design Principles</h3>
+        <p>Designed user-centric layouts with Figma, conducted usability tests, and prototyped interfaces.</p>
+        <a href="javascript:void(0);" onclick="openModal('Assets/Certificate 3.jpg')">View Certificate</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal for displaying certificate -->
+  <div id="certificateModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="Assets/Welcome 1.png" alt="Certificate" style="height:10%;width:80%;">
+    </div>
+  </div>
+
+</body>
+</html>
