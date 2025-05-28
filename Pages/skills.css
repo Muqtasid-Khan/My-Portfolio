@@ -142,3 +142,34 @@
     opacity: 0.85;
   }
   
+  /* Example mobile adjustments */
+body.mobile nav ul {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+body.mobile .hero {
+  flex-direction: column;
+  text-align: center;
+}
+
+body.mobile .hero-image,
+body.mobile .hero-content {
+  width: 100%;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

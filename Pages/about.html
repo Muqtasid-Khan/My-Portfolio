@@ -42,7 +42,7 @@
               📄 View / Download Resume
             </a>
             
-            <a href="Assets/skills.html" class="btn">My Skills</a>
+            <a href="skills.html" class="btn">My Skills</a>
 
           </div>
         </div>
@@ -57,5 +57,20 @@
       </div>
     </footer>
   </div>
+  <script>
+    function adjustForScreenSize() {
+      const width = window.innerWidth;
+  
+      if (width < 768) {
+        document.body.classList.add('mobile');
+      } else {
+        document.body.classList.remove('mobile');
+      }
+    }
+  
+    window.addEventListener('load', adjustForScreenSize);
+    window.addEventListener('resize', adjustForScreenSize);
+  </script>
+  
 </body>
 </html>

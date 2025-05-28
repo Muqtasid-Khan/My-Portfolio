@@ -93,6 +93,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  animation: float 3s ease-in-out infinite;
 }
 
 .card:hover {
@@ -152,28 +153,27 @@ h2 {
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.4);
 }
 
-/* Make the shield more prominent */
 .certificates .shield-card {
   grid-column: 1 / -1;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   text-align: center;
+  animation: float 3s ease-in-out infinite;
 }
 
 .certificates .shield-card img {
-  max-width: 50%;
+  max-width: 28%;
   height: auto;
-  margin: 0 auto 20px;
+  margin: 0 auto 12px;
   display: block;
 }
 
 .certificates .shield-card h3 {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .certificates .shield-card p {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
 }
-
 
 footer {
   text-align: center;
@@ -240,4 +240,16 @@ section {
 
 footer {
   margin-top: auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

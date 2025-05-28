@@ -208,7 +208,7 @@
 
       <!-- 🎓 Certificate 4 -->
       <div class="card">
-        <img src="Assets/Certificate 3.jpg" alt="Certificate 4">
+        <img src="Assets/Certificate 4.jpg" alt="Certificate 4">
         <h3>Award for Academic Leadership – Class Representative</h3>
         <p>
           This <strong>Certificate of Appreciation</strong> was awarded to <strong>Muqtasid Khan</strong> on 
@@ -239,6 +239,20 @@
       <img id="modalImage" src="Assets/Welcome 1.png" alt="Certificate" style="height:10%;width:80%;">
     </div>
   </div>
-
+  <script>
+    function adjustForScreenSize() {
+      const width = window.innerWidth;
+  
+      if (width < 768) {
+        document.body.classList.add('mobile');
+      } else {
+        document.body.classList.remove('mobile');
+      }
+    }
+  
+    window.addEventListener('load', adjustForScreenSize);
+    window.addEventListener('resize', adjustForScreenSize);
+  </script>
+  
 </body>
 </html>

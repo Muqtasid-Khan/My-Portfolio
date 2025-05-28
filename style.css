@@ -186,64 +186,22 @@
     background-color: #343550; /* slightly darker than --secondary */
     transform: translateY(-2px);
   }
-  #skills {
-    padding: 40px 20px;
-    background-color: var(--bg-light); /* or use white for full contrast */
-    text-align: center;
-  }
   
-  #skills h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--primary);
-  }
-  
-  #skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    list-style: none;
-    padding: 0;
-  }
-  
-  #skills {
-    padding: 60px 20px;
-    background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,30,0.9));
-    color: var(--text-light);
-    text-align: center;
-  }
-  
-  #skills h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    color: var(--text-light);
-  }
-  
-  #skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    list-style: none;
-    padding: 0;
-  }
-  
-  #skills li {
-    background: #ffffff;               /* White pills */
-    color: var(--primary);             /* #252424 text */
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: transform 0.2s ease, background 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  #skills li:hover {
-    background: #e0e0e0;
-    transform: translateY(-3px);
-  }
-  
+  /* Example mobile adjustments */
+body.mobile nav ul {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+body.mobile .hero {
+  flex-direction: column;
+  text-align: center;
+}
+
+body.mobile .hero-image,
+body.mobile .hero-content {
+  width: 100%;
+}
+
   
   
