@@ -137,10 +137,10 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   border-radius: 50%;
   display: block;
 }
+
 
 .btn {
   background-color: var(--text-light);
@@ -207,11 +207,19 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-image {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-image {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
+}
 
   .skills-button {
     font-size: 0.9rem;
@@ -219,7 +227,7 @@ nav ul li a:hover {
     max-width: 260px;
     padding: 10px 20px;
   }
-}
+
 
 /* Floating Effect */
 .floating {
