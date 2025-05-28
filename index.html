@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="Pages/Assets/Favi.png" type="image/png"> <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Pages/Assets/Favi.png" type="image/png">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Muqtasid Khan Portfolio</title>
 </head>
 
@@ -13,7 +13,15 @@
   <div class="page-container">
     <nav>
       <div class="logo">Muqtasid Khan</div>
-      <ul>
+
+      <!-- Hamburger toggle button -->
+      <div class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="Pages/about.html">About Me</a></li>
         <li><a href="Pages/projects.html">Projects</a></li>
@@ -26,7 +34,7 @@
       <section class="hero">
         <div class="hero-image">
           <div class="circular-img floating">
-            <img src="Pages/Assets/Muqtasid Khan.jpg" alt="Muqtasid Khan">
+            <img src="Pages/Assets/Muqtasid Khan.jpg" alt="Muqtasid Khan" />
           </div>
         </div>
         <div class="hero-content">
@@ -47,6 +55,7 @@
       </div>
     </footer>
   </div>
+
   <script>
     function adjustForScreenSize() {
       const width = window.innerWidth;
@@ -55,12 +64,34 @@
         document.body.classList.add('mobile');
       } else {
         document.body.classList.remove('mobile');
+        // Also hide nav menu when resizing back to desktop
+        document.getElementById('nav-menu').classList.remove('active');
+        document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
       }
     }
-  
+
+    // Hamburger menu toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+
+      // Accessibility: toggle aria-expanded attribute
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+    });
+
+    // Optional: allow keyboard toggle for accessibility
+    navToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        navToggle.click();
+      }
+    });
+
     window.addEventListener('load', adjustForScreenSize);
     window.addEventListener('resize', adjustForScreenSize);
   </script>
-  
 </body>
 </html>
