@@ -193,13 +193,13 @@ nav ul li a:hover {
   }
 
   .hero-image {
-    width: 45vw;
-    max-width: 180px;
-    border-radius: 75%;
+    width: 60vw;      /* Increased from 45vw to 60vw */
+    max-width: 220px; /* Increased from 180px to 220px */
+    border-radius: 100%;  /* Changed to full circle */
   }
 
   .hero-image img {
-    border-radius: 75%;  /* Match container */
+    border-radius: 100%;  /* Match container */
   }
 
   .skills-button {
@@ -212,13 +212,13 @@ nav ul li a:hover {
 
 @media (max-width: 480px) {
   .hero-image {
-    width: 60vw;
-    max-width: 150px;
-    border-radius: 80%;
+    width: 80vw;       /* Increased from 60vw to 80vw */
+    max-width: 200px;  /* Increased from 150px to 200px */
+    border-radius: 100%;  /* Changed to full circle */
   }
 
   .hero-image img {
-    border-radius: 80%;  /* Match container */
+    border-radius: 100%;  /* Match container */
   }
 
   .skills-button {
@@ -302,5 +302,5 @@ body.mobile .hero {
 body.mobile .hero-image,
 body.mobile .hero-content {
   width: 100%;
-  max-width: 100%; /* added for safety */
+  max-width: 100%;
 }
