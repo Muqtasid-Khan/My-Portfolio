@@ -137,6 +137,7 @@ nav ul li a:hover {
   object-fit: cover;
   object-position: center;
   display: block;
+  border-radius: 100%;  /* Keep image circular */
 }
 
 .btn {
@@ -197,6 +198,10 @@ nav ul li a:hover {
     border-radius: 75%;
   }
 
+  .hero-image img {
+    border-radius: 75%;  /* Match container */
+  }
+
   .skills-button {
     font-size: 0.95rem;
     width: 80%;
@@ -210,6 +215,10 @@ nav ul li a:hover {
     width: 60vw;
     max-width: 150px;
     border-radius: 80%;
+  }
+
+  .hero-image img {
+    border-radius: 80%;  /* Match container */
   }
 
   .skills-button {
@@ -293,4 +302,5 @@ body.mobile .hero {
 body.mobile .hero-image,
 body.mobile .hero-content {
   width: 100%;
+  max-width: 100%; /* added for safety */
 }
