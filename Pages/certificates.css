@@ -116,7 +116,7 @@ h2 {
 
 /* Normal certificate cards */
 .card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgb(32, 62, 137);
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
@@ -171,7 +171,7 @@ h2 {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-  background: linear-gradient(to right, #504e53, #5c5c7b);
+  background: linear-gradient(to right, #0e0b69, #51519f);
   color: #ffffff;
   border-radius: 8px;
   text-decoration: none;
@@ -184,9 +184,9 @@ h2 {
 }
 
 .card a:hover {
-  background: linear-gradient(to right, #4f4b64, #26244a);
+  background: linear-gradient(to right, #588bbd, #5762b9);
   transform: scale(1.08);
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7px 14px rgb(103, 154, 231);
 }
 
 footer {
